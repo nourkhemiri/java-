@@ -10,7 +10,7 @@ package entite;
  * @author pc doctor
  */
 public class vaccins {
-        private int id;
+        private String id;
     private String nom;
     private String id_pharmacie;
     private String Description;
@@ -21,7 +21,7 @@ public class vaccins {
     public vaccins() {
     }
 
-    public vaccins(int id, String nom, String id_pharmacie, String Description, double prix, int quantity, String img) {
+    public vaccins(String id, String nom, String id_pharmacie, String Description, double prix, int quantity, String img) {
         this.id = id;
         this.nom = nom;
         this.id_pharmacie = id_pharmacie;
@@ -40,11 +40,11 @@ public class vaccins {
         this.img = img;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -95,6 +95,8 @@ public class vaccins {
     public void setImg(String img) {
         this.img = img;
     }
+
+   
 
  
 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="retour" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PanierController">
+   <children>
+      <Button layoutX="363.0" layoutY="110.0" mnemonicParsing="false" onAction="#reserver" style="-fx-background-color: #44F35C;" text="Reserver" />
+      <TableView fx:id="table" layoutX="13.0" layoutY="83.0" onMouseClicked="#getselected" prefHeight="200.0" prefWidth="341.0" style="-fx-background-color: #CEFAD4;">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="10.0" text="id" />
+          <TableColumn fx:id="id_vaccin" minWidth="7.0" prefWidth="14.0" text="id_vaccin" />
+            <TableColumn fx:id="nom_vaccin" prefWidth="122.0" text="nom vaccin" />
+            <TableColumn fx:id="prix_vaccin" prefWidth="202.0" text="prix Vaccin" />
+            <TableColumn fx:id="prix_vaccin1" prefWidth="33.0" text="prix Vaccin" />
+        </columns>
+      </TableView>
+      <Button layoutX="523.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#getAffiche" text="panier" />
+      <Button fx:id="modifier" layoutX="445.0" layoutY="246.0" mnemonicParsing="false" onAction="#Edit" style="-fx-background-color: #44F35C;" text="modifier" />
+      <Button fx:id="supprimer" layoutX="513.0" layoutY="246.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: #44F35C;" text="supprimer" />
+      <TextField fx:id="text_id" layoutX="437.0" layoutY="216.0" />
+      <TextField fx:id="text_nom" layoutX="437.0" layoutY="188.0" />
+      <Button fx:id="ajouter_au_panier" layoutX="281.0" layoutY="329.0" mnemonicParsing="false" style="-fx-background-color: #28a138;" text="Ajouter au panier" textFill="#f2f2f2" />
+      <Label layoutX="48.0" layoutY="29.0" text="Votre panier &quot;Sahty.tn&quot;" textFill="#28a138">
+         <font>
+            <Font name="Britannic Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="totall" layoutX="73.0" layoutY="293.0" mnemonicParsing="false" onAction="#total" text="Prix total ttc" />
+      <Button fx:id="rt" layoutX="497.0" layoutY="45.0" mnemonicParsing="false" text="Retour" />
+      <Button fx:id="act" layoutX="497.0" layoutY="82.0" mnemonicParsing="false" text="Actualiser" />
+   </children>
+</AnchorPane>

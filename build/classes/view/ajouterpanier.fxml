@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="view.AjouterpanierController">
+   <children>
+      <TextField fx:id="id_vaccin" layoutX="212.0" layoutY="98.0" />
+      <TextField fx:id="nom_vaccin" layoutX="212.0" layoutY="148.0" />
+      <TextField fx:id="prix_vaccin" layoutX="212.0" layoutY="207.0" />
+      <Label layoutX="147.0" layoutY="102.0" text="id_vaccin" />
+      <Label layoutX="140.0" layoutY="152.0" text="nom_vaccin" />
+      <Label layoutX="142.0" layoutY="211.0" text="prix_vaccin" />
+      <Button fx:id="panier" layoutX="233.0" layoutY="251.0" mnemonicParsing="false" style="-fx-background-color: #FFFF00;" text="Ajouter au panier" />
+   </children>
+</AnchorPane>

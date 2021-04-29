@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AjoutervaccinController">
+   <children>
+      <Label layoutX="123.0" layoutY="46.0" text="nom" />
+      <TextField fx:id="nom" layoutX="171.0" layoutY="42.0" />
+      <TextField fx:id="id_pharmacie" layoutX="171.0" layoutY="75.0" />
+      <TextField fx:id="img" layoutX="171.0" layoutY="210.0" />
+      <TextField fx:id="quantity" layoutX="171.0" layoutY="175.0" />
+      <TextField fx:id="prix" layoutX="171.0" layoutY="145.0" />
+      <TextField fx:id="description" layoutX="171.0" layoutY="110.0" />
+      <Label layoutX="88.0" layoutY="77.0" text="id_pharmacie" />
+      <Label layoutX="96.0" layoutY="114.0" text="description" />
+      <Label layoutX="109.0" layoutY="149.0" text="prix" />
+      <Label layoutX="105.0" layoutY="179.0" text="quantity" />
+      <Label layoutX="113.0" layoutY="214.0" text="image" />
+      <Button fx:id="ajouter" layoutX="186.0" layoutY="249.0" mnemonicParsing="false" style="-fx-background-color: #65BFB3;" text="Ajouter le vaccin" textFill="#fffdfd" />
+      <Button fx:id="retour" layoutX="372.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #40A497;" text="Retour" />
+      <Button fx:id="calendrier" layoutX="457.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #40A497;" text="Calendrier" />
+   </children>
+</AnchorPane>

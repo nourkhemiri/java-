@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/entite/vaccins.java</file>
+            <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/view/acceuil.fxml</file>
+            <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/view/PanierController.java</file>
+            <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/view/ListeVaccinController.java</file>
+            <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/view/AcceuilController.java</file>
+            <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/view/panier.fxml</file>
             <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/projet/Projet.java</file>
-            <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/utils/DataSource.java</file>
-            <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/service/VaccinService.java</file>
+            <file>file:/C:/Users/pc%20doctor/Documents/NetBeansProjects/projet/src/view/CalculatorController.java</file>
         </group>
     </open-files>
 </project-private>

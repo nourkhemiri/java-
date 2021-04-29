@@ -47,15 +47,39 @@ public class VaccinService {
             ste=connection.createStatement();
             rs=ste.executeQuery(req);
             while (rs.next()){
-                List.add(new vaccins(rs.getInt("id"), rs.getString("nom"),rs.getString("id_pharmacie") , rs.getString("description"), rs.getDouble("prix"), rs.getInt("quantity"), rs.getString("img")));
+                List.add(new vaccins(rs.getString("id"), rs.getString("nom"),rs.getString("id_pharmacie") , rs.getString("description"), rs.getDouble("prix"), rs.getInt("quantity"), rs.getString("img")));
             }
         } catch (SQLException ex) {
             Logger.getLogger(VaccinService.class.getName()).log(Level.SEVERE, null, ex);
         }
         return List;
     }
-public void Updatevaccin(){
-      String req="UPDATE vaccins SET nom='roua' WHERE id='2'";
+        public List<vaccins> affichervaccin(){
+        String req="select* from vaccins";
+        ArrayList<vaccins> List=new ArrayList<>();
+        try {
+            ste=connection.createStatement();
+            rs=ste.executeQuery(req);
+            while (rs.next()){
+                vaccins v=new vaccins();
+                v.setId(rs.getString("id"));
+                v.setNom(rs.getString("nom"));
+                v.setId_pharmacie(rs.getString("id_pharmacie"));
+                v.setDescription(rs.getString("description"));
+                v.setPrix(rs.getDouble("prix"));
+                v.setQuantity(rs.getInt("quantity"));
+                v.setImg(rs.getString("img"));
+                List.add(v);
+                System.out.println("vaccin affiché");
+               
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return List;
+    }
+public void Updatevaccin(String id, String nom){
+      String req="UPDATE vaccins SET nom='"+nom+"' WHERE id='"+id+"'";
     
       try {
             ste=connection.createStatement();
@@ -68,9 +92,9 @@ public void Updatevaccin(){
             Logger.getLogger(VaccinService.class.getName()).log(Level.SEVERE, null, ex);
         }
   }
-public void Deletevaccin() {
+public void Deletevaccin(String id) {
         
-          String req="DELETE From vaccins WHERE nom='roua'";
+          String req="DELETE From vaccins WHERE id='"+id+"'";
     
       try {
             ste=connection.createStatement();
@@ -133,16 +157,16 @@ public void Recherchervaccin( String nom ) {
 }
 */
 
-        public List<String> readmy(String mychar) {
-        List<String> form = new ArrayList<>();
+        public ArrayList<vaccins> readmy(String mychar) {
+        ArrayList<vaccins> form = new ArrayList<>();
        
-          String req="SELECT * FROM `vaccins` WHERE `nom` LIKE '" + mychar + "' ";
+          String req="SELECT * FROM `vaccins` WHERE `nom` LIKE '%" + mychar + "%' ";
         try {
             ste=connection.createStatement();
               rs=ste.executeQuery(req);
-               while(rs.next()){
-            form.add(rs.getString("nom"));
-             form.add(rs.getString("prix"));
+              while (rs.next()) {
+              form.add(new vaccins(rs.getString("id"), rs.getString("nom"),rs.getString("id_pharmacie") , rs.getString("description"), rs.getDouble("prix"), rs.getInt("quantity"), rs.getString("img")));
+           
         }
         } catch (SQLException ex) {
             Logger.getLogger(VaccinService.class.getName()).log(Level.SEVERE, null, ex);
@@ -159,7 +183,7 @@ public void Recherchervaccin( String nom ) {
             ste=connection.createStatement();
             rs=ste.executeQuery(req);
             while(rs.next()){
-                list.add(new vaccins(rs.getInt("id"), rs.getString("nom"),rs.getString("id_pharmacie") , rs.getString("description"), rs.getDouble("prix"), rs.getInt("quantity"), rs.getString("img")));
+                list.add(new vaccins(rs.getString("id"), rs.getString("nom"),rs.getString("id_pharmacie") , rs.getString("description"), rs.getDouble("prix"), rs.getInt("quantity"), rs.getString("img")));
             }
         } catch (SQLException ex) {
             Logger.getLogger(VaccinService.class.getName()).log(Level.SEVERE, null, ex);
@@ -193,5 +217,23 @@ public void Recherchervaccin( String nom ) {
             Logger.getLogger(VaccinService.class.getName()).log(Level.SEVERE, null, ex);
         }
    }
+
+    public Object getData() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+     public ArrayList<vaccins> readchart(){
+        String req="select* from vaccins";
+        ArrayList<vaccins> List=new ArrayList<>();
+        try {
+            ste=connection.createStatement();
+            rs=ste.executeQuery(req);
+            while (rs.next()){
+                List.add(new vaccins(rs.getString("id"), rs.getString("nom"),rs.getString("id_pharmacie") , rs.getString("description"), rs.getDouble("prix"), rs.getInt("quantity"), rs.getString("img")));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(VaccinService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return List;
+    }
 
 }
